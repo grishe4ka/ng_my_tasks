@@ -1,5 +1,12 @@
 # Gri
 
+## To Start progect run:
+npm i -g @angular/cli
+npm i -g json-server
+json-server --watch data.json
+ng serve
+http://localhost:4200/
+
 ## Content
 
 ### creating new project
