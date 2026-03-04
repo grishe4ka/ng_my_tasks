@@ -1,20 +1,29 @@
-<div class="taskDetail">
-    <h2>Task Details:</h2>
+<form>
+    <div class="taskDetail">
+        <h2>Task Details:</h2>
 
-    <p *ngIf="task">
-        <!-- <strong>{{ amount | currency:'USD'}}</strong> -->
-        <strong>{{ task.title | uppercase }}</strong><br>
-        {{ task.description }}<br>
-    <div class="taskDates">
-        Execution period: 
-        from {{ task.taskStart | date: "short" }} 
-        to {{task.taskEnd | date: "short" }}
-    </div><br>
-    <p>
-        <em>Created: {{ task.createdAt }}</em>
-    </p>
+        <p *ngIf="task">
+            <!-- <strong>{{ amount | currency:'USD'}}</strong> -->
+            <strong>{{ task.title | uppercase }}</strong><br>
+            {{ task.description }}<br>
+        <div class="taskDates">
+            Execution period:
+            from {{ task.taskStart | date: "short" }}
+            to {{task.taskEnd | date: "short" }}
+        </div><br>
+        <p>
+            <em>Created: {{ task.createdAt }}</em>
+        </p>
+        <label>Check if task DONE</label>
+        &nbsp
 
-    <p *ngIf="!task">
-        Task not found.
-    </p>
-</div>
+        <input type="checkbox" [checked]="task.isCompleted" (change)="onCheckboxChange(task.id, $event)" />
+
+        <input type="checkbox" checked="false">
+
+        <p *ngIf="!task">
+            Task not found.
+        </p>
+    </div>
+    <button type="submit">Save</button>
+</form>

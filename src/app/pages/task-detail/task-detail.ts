@@ -11,6 +11,7 @@ import { TaskShortenerPipe } from '../../pipes/task-shortener-pipe';
   styleUrl: './task-detail.css',
 })
 export class TaskDetail {
+
   taskId!: number;
   task: any;
   amount: number = 45.6; //pipe currency example
@@ -25,5 +26,29 @@ export class TaskDetail {
         .getTasks()()
         .find(n => n.id == this.taskId);
     })
+  }
+
+  protected submitted = false;
+
+  onCheckboxChange(taskId: number, event: any) {
+    this.submitted = true;
+
+    const checked = event.target.checked;
+    console.log('checked = ' + checked);
+
+    this.task = this.taskService
+      .getTasks()()
+      .find(n => n.id == this.taskId);
+
+    if (this.task.isCompleted != checked) {
+      console.log('if (this.task.isCompleted != checked)');
+      this.task.set({
+        isCompleted: checked
+      });
+    }
+
+    console.log('chbx clicked');
+    //alert('chbx clicked');
+    this.submitted = false;
   }
 }
