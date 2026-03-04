@@ -1,0 +1,20 @@
+<div class="taskDetail">
+    <h2>Task Details:</h2>
+
+    <p *ngIf="task">
+        <!-- <strong>{{ amount | currency:'USD'}}</strong> -->
+        <strong>{{ task.title | uppercase }}</strong><br>
+        {{ task.description }}<br>
+    <div class="taskDates">
+        Execution period: 
+        from {{ task.taskStart | date: "short" }} 
+        to {{task.taskEnd | date: "short" }}
+    </div><br>
+    <p>
+        <em>Created: {{ task.createdAt }}</em>
+    </p>
+
+    <p *ngIf="!task">
+        Task not found.
+    </p>
+</div>

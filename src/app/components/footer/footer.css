@@ -1,0 +1,102 @@
+footer {
+  background: linear-gradient(135deg, #2c3e50, #1e2a36);
+  color: #ecf0f1;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  transition: background 0.3s ease;
+}
+
+footer.footer {
+  background: linear-gradient(135deg, #024235, #2ecc71);
+  box-shadow: 0 -10px 30px rgba(46, 204, 113, 0.3);
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease;
+}
+
+footer input[type="text"] {
+  padding: 14px 20px;
+  width: 280px;
+  max-width: 90%;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: 2px solid transparent;
+  transition: all 0.3s;
+  margin-right: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+footer input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+footer button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+}
+
+footer button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+footer button:active {
+  transform: translateY(-1px);
+}
+
+footer div {
+  display: flex;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 600px) {
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  footer button {
+    width: 100%;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}

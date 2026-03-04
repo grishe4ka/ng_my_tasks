@@ -1,0 +1,54 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 10px 10px;
+}
+.logo {
+    color: rgb(3, 93, 39);
+    font-size:x-large;
+    font-weight: 600;
+}
+.nav-link {
+    color:rgb(38, 6, 126);
+    font-size:large;
+}
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  border-radius: 4px;
+  display: none; /* или управляйте через класс */
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+}
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+}
+/* Класс для показа меню (добавляется через JS) */
+.dropdown.open .dropdown-menu {
+  display: block;
+}

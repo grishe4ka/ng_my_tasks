@@ -1,5 +1,23 @@
 # Gri
 
+## Content
+
+### creating new project
+npm i -g @angular/cli
+ng new [project name]
+
+### type script
+
+### decorators components models services constructor DI
+
+### add json server
+npm i -g json-server
+json-server --watch data.json
+
+### creting my own pipe
+ng g pipe pipes\taskShortener
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
 
 ## Development server

@@ -1,0 +1,27 @@
+<h2>Add new task:</h2>
+
+<form #taskForm="ngForm" (ngSubmit)="addTask(taskForm)">
+
+    <div>
+        <label>Title</label><br>
+        <input type="text" name="title" [(ngModel)]="newTask().title" required minlength="1" maxlength="50"
+            #titleRef="ngModel" placeholder="Enter title">
+        <div *ngIf="submitted && titleRef.invalid" style="color: rgb(205, 4, 4)">
+            <small *ngIf="titleRef.errors?.['required']">Title required</small>
+            <small *ngIf="titleRef.errors?.['minlength']">Title min length 3 symbols</small>
+            <small *ngIf="titleRef.errors?.['maxlength']">Title max length 50 symbols</small>
+        </div>
+    </div>
+
+    <div>
+        <label>Description</label><br>
+        <textarea name="description" [(ngModel)]="newTask().description" required minlength="1"
+            #descriptionRef="ngModel"></textarea><br>
+        <div *ngIf="submitted && descriptionRef.invalid" style="color: rgb(205, 4, 4)">
+            <small *ngIf="descriptionRef.errors?.['required']">Description required</small>
+            <small *ngIf="descriptionRef.errors?.['minlength']">Description min length 5 symbols</small>
+        </div>
+    </div>
+
+    <button type="submit">Add Task</button>
+</form>

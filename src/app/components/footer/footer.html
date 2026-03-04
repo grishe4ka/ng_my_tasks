@@ -1,0 +1,12 @@
+<footer [ngClass]="{footer: username != ''}">
+   <div [ngStyle]="{ 'display': username != '' ? 'block' : 'none' }">
+      <p [ngStyle]="{ 'color': username != '' ? 'white' : 'black' }">
+         Hello {{ username }}
+      </p>
+   </div>
+   <input type="text" [(ngModel)]="username" placeholder="enter your name">
+   <button (click)="onSubscribe()">Subsribe</button>
+   <div style="padding-top: 25px;">
+      <small>@Copirights 2026</small>
+   </div>
+</footer>
