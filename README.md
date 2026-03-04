@@ -1,17 +1,17 @@
 # Gri
 
 ## To Start progect run:
-npm i -g @angular/cli
-npm i -g json-server
-json-server --watch data.json
-ng serve
-http://localhost:4200/
+### npm i -g @angular/cli
+### npm i -g json-server
+### json-server --watch data.json
+### ng serve
+### http://localhost:4200/
 
 ## Content
 
-### creating new project
-npm i -g @angular/cli
-ng new [project name]
+## creating new project
+### npm i -g @angular/cli
+### ng new [project name]
 
 ### type script
 
@@ -24,6 +24,7 @@ json-server --watch data.json
 ### creting my own pipe
 ng g pipe pipes\taskShortener
 
+# Base readme:
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
 
